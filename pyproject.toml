@@ -1,0 +1,19 @@
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = """
+    missing-docstring,
+    import-error,
+    wrong-import-position,
+"""
+max-line-length = 120
+
+ignore-paths = 'scripts/nms.py'
